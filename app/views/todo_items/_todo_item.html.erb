@@ -7,5 +7,8 @@
   <% if !todo_item.completed? %>
     <%= link_to "Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id),
       method: :patch %>
+  <% else %>
+    <%= link_to "Undo", undo_todo_list_todo_item_path(@todo_list, todo_item.id),
+      method: :patch %>
   <% end %>
 </p>
