@@ -1,25 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<h1 class="header">Lists</h1>
-<% @todo_lists.each do |todo_list| %>
-  <div class="todo-list">
-    <h2 class="list-title">
-      <%= link_to todo_list.title, todo_list %>
-      <small>
-        <%= link_to edit_todo_list_path(todo_list) do %>
-          <i class="fa fa-edit"></i>
-        <% end %>
-      </small>
-      <small>
-        <%= link_to todo_list, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="fa fa-trash"></i>
-        <% end %>
-      </small>
-    </h2>
-    <p><%= todo_list.description %></p>
-  </div>
-<% end %>
+<div class="lists-grid">
+  <% @todo_lists.each do |todo_list| %>
+      <%= link_to todo_list do %>
+      <div class="todo-list grow-box">
+        <h2 class="list-title">
+          <%= todo_list.title %>
+        </h2>
+        <p class="list-body"><%= todo_list.description %></p>
+      </div>
+      <% end %>
+  <% end %>
+</div>
 
 <br>
 
-<%= link_to 'New Todo List', new_todo_list_path %>

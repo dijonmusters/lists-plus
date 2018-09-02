@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
+<h2>
   <%= @todo_list.title %>
-</p>
+  <%= link_to edit_todo_list_path(@todo_list) do %>
+    <i class="fa fa-edit"></i>
+  <% end %>
+  <%= link_to @todo_list, method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <i class="fa fa-trash"></i>
+  <% end %>
+</h2>
 
 <p>
   <strong>Description:</strong>
@@ -17,5 +20,4 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+

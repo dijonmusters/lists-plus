@@ -15,8 +15,10 @@
  *= require_self
  */
 body {
+  margin: 3em;
   font-family: -apple-system, 'Segoe UI', Roboto, Oxygen, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 100vh;
+  color: #333;
   background: -webkit-linear-gradient(40deg, #9796F0 10%, #FBC7D4 100%);
   background: -moz-linear-gradient(40deg, #9796F0 10%, #FBC7D4 100%);
   background: -ms-linear-gradient(40deg, #9796F0 10%, #FBC7D4 100%);
